@@ -1,0 +1,114 @@
+$body-bg-color: #FFF;
+$body-text-color: #6b717f;
+$section-border-color: #8C8C8C;
+$section-shadow-color: #6b717f;
+$code-bg-color: #000;
+$code-border-color: #6B717f;
+$code-text-color: #8C8C8C;
+$header-text-color:  #BF4080;
+$warning-border-color: #8C8C8C;
+$warning-text-color: #fff;
+$success-bg-color: green;
+$error-bg-error: red;
+$warning-bg-color: orange;
+$padding: 16px;
+
+
+body {
+    color: $body-text-color;
+    background-color: $body-bg-color;
+    padding: $padding;
+}
+
+@mixin borders {
+    border: 1px &$section-border-color solid;
+    -webkit-box-shadow: 10px 10px 15px -4px &$section-shadow-color;
+    -moz-box-shadow: 10px 10px 15px -4px &$section-shadow-color;
+    box-shadow: 10px 10px 15px -4px &$section-shadow-color;
+}
+
+main {
+    padding: 0 $padding;
+    article {
+        display: flex;
+        flex-wrap: wrap;
+        section {
+            flex-grow: 1;
+            flex-basis: 45%;
+            @include borders;
+            margin: 16px;
+            clear: both;
+            overflow: auto;
+            box-sizing: border-box;
+            #selling-points {
+                flex-grow: 2;
+                flex-basis: 100%;
+            }
+        }
+        code {
+            background: $code-bg-color;
+            border: 1px solid $code-border-color;
+            color: $code-text-color;
+            page-break-inside: avoid;
+            font-family: monospace;
+            font-size: 15px;
+            line-height: 1.6;
+            margin-bottom: 1.6em;
+            max-width: 100%;
+            overflow: auto;
+            display: block;
+            word-wrap: break-word;
+        }
+        code:before {
+            float: left;
+            width: 40%;
+        }
+        code:after {
+            float: right;
+            width: 40%;
+        }
+    }
+}
+
+h1, h2, h3 {
+    color: $header-text-color;
+}
+
+h1 {
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 0px;
+}
+
+footer {
+    h3 {
+        padding: $padding * 2;
+    }
+}
+
+%formatBox {
+    border: 1px solid $warning-border-color;
+    color: #fff;
+}
+
+.success {
+    @extend %formatBox;
+    background-color: $success-bg-color;
+}
+
+.error {
+    background-color: $error-bg-error;
+    @extend %formatBox;
+    &:hover {
+        background-color: $success-bg-color;
+    }
+}
+
+.warning {
+    @extend %formatBox;
+    background-color: $warning-bg-color;
+}
