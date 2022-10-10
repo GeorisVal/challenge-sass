@@ -7,10 +7,10 @@
 }
 
 @mixin borders {
-    border: 1px &$section-border-color solid;
-    -webkit-box-shadow: 10px 10px 15px -4px &$section-shadow-color;
-    -moz-box-shadow: 10px 10px 15px -4px &$section-shadow-color;
-    box-shadow: 10px 10px 15px -4px &$section-shadow-color;
+    border: 1px $section-border-color solid;
+    -webkit-box-shadow: 10px 10px 15px -4px $section-shadow-color;
+    -moz-box-shadow: 10px 10px 15px -4px $section-shadow-color;
+    box-shadow: 10px 10px 15px -4px $section-shadow-color;
 }
 
 body {
@@ -21,6 +21,7 @@ body {
 
 main {
     padding: 0 $padding;
+}
     article {
         display: flex;
         flex-wrap: wrap;
@@ -29,10 +30,11 @@ main {
             flex-basis: 45%;
             @include borders;
             margin: 16px;
+            padding: $padding;
             clear: both;
             overflow: auto;
             box-sizing: border-box;
-            #selling-points {
+            &#selling-points {
                 flex-grow: 2;
                 flex-basis: 100%;
             }
@@ -60,7 +62,7 @@ main {
             }
         }
     }
-}
+
 
 h1, h2, h3 {
     color: $header-text-color;
@@ -85,6 +87,7 @@ footer {
 %formatBox {
     border: 1px solid $warning-border-color;
     color: #fff;
+    padding: $padding;
 }
 
 .success {

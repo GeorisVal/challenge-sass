@@ -37,27 +37,29 @@ body {
 main {
   padding: 0 16px;
 }
-main article {
+
+article {
   display: flex;
   flex-wrap: wrap;
 }
-main article section {
+article section {
   flex-grow: 1;
   flex-basis: 45%;
-  border: 1px main article section #8C8C8C solid;
-  -webkit-box-shadow: 10px 10px 15px -4px main article section #6b717f;
-  -moz-box-shadow: 10px 10px 15px -4px main article section #6b717f;
-  box-shadow: 10px 10px 15px -4px main article section #6b717f;
+  border: 1px #8C8C8C solid;
+  -webkit-box-shadow: 10px 10px 15px -4px #6b717f;
+  -moz-box-shadow: 10px 10px 15px -4px #6b717f;
+  box-shadow: 10px 10px 15px -4px #6b717f;
   margin: 16px;
+  padding: 16px;
   clear: both;
   overflow: auto;
   box-sizing: border-box;
 }
-main article section #selling-points {
+article section#selling-points {
   flex-grow: 2;
   flex-basis: 100%;
 }
-main article code {
+article code {
   background: #000;
   border: 1px solid #6B717f;
   color: #8C8C8C;
@@ -71,11 +73,11 @@ main article code {
   display: block;
   word-wrap: break-word;
 }
-main article code:before {
+article code:before {
   float: left;
   width: 40%;
 }
-main article code:after {
+article code:after {
   float: right;
   width: 40%;
 }
@@ -101,6 +103,7 @@ footer h3 {
 .warning, .error, .success {
   border: 1px solid #8C8C8C;
   color: #fff;
+  padding: 16px;
 }
 
 .success {
