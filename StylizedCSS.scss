@@ -6,11 +6,11 @@
     }
 }
 
-@mixin borders {
+@mixin borders($mixin-value) {
     border: 1px $section-border-color solid;
-    -webkit-box-shadow: 10px 10px 15px -4px $section-shadow-color;
-    -moz-box-shadow: 10px 10px 15px -4px $section-shadow-color;
-    box-shadow: 10px 10px 15px -4px $section-shadow-color;
+    -webkit-box-shadow: 10px 10px 15px -4px $mixin-value;
+    -moz-box-shadow: 10px 10px 15px -4px $mixin-value;
+    box-shadow: 10px 10px 15px -4px $mixin-value;
 }
 
 body {
@@ -28,7 +28,7 @@ main {
         section {
             flex-grow: 1;
             flex-basis: 45%;
-            @include borders;
+            @include borders($section-border-color);
             margin: 16px;
             padding: $padding;
             clear: both;
@@ -47,6 +47,7 @@ main {
             font-family: monospace;
             font-size: 15px;
             line-height: 1.6;
+            padding: $padding;
             margin-bottom: 1.6em;
             max-width: 100%;
             overflow: auto;
