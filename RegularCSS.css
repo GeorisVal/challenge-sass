@@ -1,3 +1,33 @@
+.adv-item:nth-child(6n+1) {
+  background-color: #999999;
+  color: #e60000;
+}
+
+.adv-item:nth-child(6n+2) {
+  background-color: #a6a6a6;
+  color: #cc0000;
+}
+
+.adv-item:nth-child(6n+3) {
+  background-color: #b2b2b2;
+  color: #b30000;
+}
+
+.adv-item:nth-child(6n+4) {
+  background-color: #bfbfbf;
+  color: #990000;
+}
+
+.adv-item:nth-child(6n+5) {
+  background-color: #cccccc;
+  color: maroon;
+}
+
+.adv-item:nth-child(6n+6) {
+  background-color: #d9d9d9;
+  color: #660000;
+}
+
 body {
   color: #6b717f;
   background-color: #FFF;
